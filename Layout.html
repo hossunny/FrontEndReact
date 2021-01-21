@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout Practice</title>
+        <style>
+            #specification{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .Box{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body style="margin-bottom : 300px; width:100%; ">
+        <div id="header" style="display:flex; justify-content:space-between; width:100%; 
+                                background-color:#01bf86; align-items:center;
+                                position: fixed;
+                                top: 0;
+                                right: 0;
+                                left: 0;">
+            <div id="menus" style="display:flex; width:20%; padding:20px">
+                <button style="margin-right:60px; background-color:#01bf86;border: #01bf86;
+                                 color:white;font-weight: 600;font-size: larger">ZodKoo</button>
+                <button style="margin-right:15px; background-color:#01bf86;border: #01bf86;
+                                color:white;font-size: medium">Home</button>
+                <button style="margin-right:15px; background-color:#01bf86;border: #01bf86;
+                                 color:white;font-size: medium;">Features</button>
+                <button style="margin-right:15px; background-color:#01bf86;border: #01bf86;
+                                color:white;font-size: medium">Plans</button>
+                <button style="margin-right:15px; background-color:#01bf86;border: #01bf86;
+                                 color:white;font-size: medium">Clients</button>
+                <button style="background-color:#01bf86; color:white; border: #01bf86;font-size: medium">Pages▼</button>
+            </div>
+            <div style="display:flex; margin-right:20px">
+                <button style="margin-right:15px; background-color:#01bf86;border: #01bf86;
+                color:white;font-size: medium">Login</button>
+                <button 
+                style="border-top-right-radius:5px; border-bottom-right-radius:5px;
+                        border-top-left-radius:5px; border-bottom-left-radius:5px;
+                        color:#01bf86; background-color:white; border:white"
+                >
+                Try for Free
+                </button>
+            </div>
+        </div>
+        <div id="description" style="margin-top:100px; display:flex; align-items:center;
+                                    justify-content:space-between;background-color:#01bf86;">
+            <div id="content" style="display:flex; flex-direction:column; width:40%; padding:30px">
+                <p style="font-size: x-large; color:white">Zodkoo is a fully responsive landing page template</p>
+                <p style="font-size: small; color:white">Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</p>
+                <div>
+                    <button style="background-color:#01bf86; color:white; 
+                                    border-top-right-radius:5px; border-bottom-right-radius:5px;
+                                    border-top-left-radius:5px; border-bottom-left-radius:5px;border-color:white;
+                                    ">GET STARTED</button>
+                    <span style="font-size:medium; color:white">OR</span>
+                    <img
+                        id="logo"
+                        width="20px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                    <button>WATCH VIDEO</button>
+                </div>
+            </div>
+            <div id="inputBox" style="padding:30px; background-color:white; color:gray;
+                                        align-items:center">
+                <p>REGISTER FOR FREE</p>
+                <div class="input">
+                    <input type="text" placeholder="Full name" style="margin-bottom: 8px; " />
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Email Address" style="margin-bottom: 8px;" />
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="User name" style="margin-bottom: 8px;" />
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Password" style="margin-bottom: 8px;" />
+                </div>
+                <div>
+                    <button style="width:100%">START NOW</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="product" style="display: flex; flex-direction:column; align-items:center;">
+            <div>
+                <img
+                    id="logo"
+                    width="100px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                >
+                <p>Clean and Ultra Modern Design</p>
+            </div>
+            <div style="display: flex; flex-direction:row; padding: 50px; justify-content:space-evenly">
+                <div style="width:40%; ">
+                    <p>Praesent et viverra massa non varius magna eget nibh vitae velit posuere efficitur.</p>
+                    <p>The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.We put a lot of effort in design, as it’s the most important ingredient of successful website.
+                    </p>
+                    <button>LEARN MORE</button>
+                </div>
+                <div>
+                    <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                    >
+                </div>
+            </div>
+        </div>
+        <div id="specification">
+            <div style="display: flex; flex-direction:column; align-items:center">
+                <p>It's designed for describing your app, agency or business</p>
+                <p>The clean and well commented code allows easy customization of the theme.It's
+                    designed for describing your app, agency or business.</p>
+            </div>
+            <div>
+                <div class="Box">
+                    <div>
+                        <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Strategy Solutions</p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Digital Design</p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Analytics Solutions</p>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+                        </p>
+                    </div>
+                </div>
+                <div class="Box">
+                    <div>
+                        <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Strategy Solutions</p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Digital Design</p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                        id="logo"
+                        width="300px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Analytics Solutions</p>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Price" style="display: flex; flex-direction:column; align-items:center">
+            <div>
+                <p>Choose your perfect plan</p>
+                <p>
+                    The clean and well commented code allows easy customization of the theme.It's
+                    designed for describing your app, agency or business.
+                </p>
+            </div>
+            <div style="display: flex; align-items:center;">
+                <div>
+                    <div>
+                        <p>BASIC</p>
+                        <p>$19</p>
+                        <p>Per Month</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>10 GB Storage</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>500 GB Bandwidth</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>Email Support</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>24x7 Support</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button>SIGNUP NOW</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>BASIC</p>
+                        <p>$19</p>
+                        <p>Per Month</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>10 GB Storage</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>500 GB Bandwidth</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>Email Support</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>24x7 Support</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button>SIGNUP NOW</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>BASIC</p>
+                        <p>$19</p>
+                        <p>Per Month</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>10 GB Storage</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>500 GB Bandwidth</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>Email Support</span>
+                        </div>
+                        <div>
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <span>24x7 Support</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button>SIGNUP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Sponser" style="display: flex; flex-direction:column; align-items:center">
+            <div>
+                <p>Trusted by Thousands</p>
+                <p>
+                    The clean and well commented code allows easy customization of the theme.It's
+                    designed for describing your app, agency or business.
+                </p>
+            </div>
+            <div>
+                <img
+                    id="logo"
+                    width="50px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                >
+                <img
+                    id="logo"
+                    width="50px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                >
+                <img
+                    id="logo"
+                    width="50px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                >
+                <img
+                    id="logo"
+                    width="50px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                >
+            </div>
+            <div class="row" style="display: flex;">
+                <div>
+                    <div>
+                        <p>
+                            “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <img
+                            id="logo"
+                            width="50px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Calebogden</p>
+                        <span>Another company , City</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>
+                            “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <img
+                            id="logo"
+                            width="50px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Dancounsell</p>
+                        <span>Another company , City</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>
+                            “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <img
+                            id="logo"
+                            width="50px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        >
+                        <p>Indianguru</p>
+                        <span>Another company , City</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Contact" style="display: flex; flex-direction:column; align-items:center">
+            <div>
+                <p>Be engaged Newsletter</p>
+                <p>The clean and well commented code allows easy customization of the theme.It's
+                    designed for describing your app, agency or business.</p>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter e-mail address" />
+            </div>
+            <div>
+                <button>SUBSCRIBE</button>
+                <p>You can un-subscribe at any time.</p>
+            </div>
+        </div>
+
+
+    </body>
+</html>
