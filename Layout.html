@@ -8,14 +8,21 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                background-color: #f3f6fa; 
+                border-top: 1px solid #e8eef6; 
+                border-bottom: 1px solid #e8eef6;"
             }
             .Box{
                 display: flex;
             }
+
+            #price_details{
+                font-size: 13px;
+            }
         </style>
     </head>
-    <body style="margin-bottom : 300px; width:100%; ">
-        <div id="header" style="display:flex; justify-content:space-between; width:100%; 
+    <body style=" width:100%; ">
+        <div id="header" style="display:flex; justify-content:space-around; width:100%; 
                                 background-color:#01bf86; align-items:center;
                                 position: fixed;
                                 top: 0;
@@ -38,397 +45,533 @@
                 <button style="margin-right:15px; background-color:#01bf86;border: #01bf86;
                 color:white;font-size: medium">Login</button>
                 <button 
-                style="border-top-right-radius:5px; border-bottom-right-radius:5px;
-                        border-top-left-radius:5px; border-bottom-left-radius:5px;
-                        color:#01bf86; background-color:white; border:white"
-                >
+                style="border-radius: 400px; font-weight:600;
+                        color:#01bf86; background-color:white; border:white;
+                        width: 100px;height: 30px;"
+                    >
                 Try for Free
                 </button>
             </div>
         </div>
-        <div id="description" style="margin-top:100px; display:flex; align-items:center;
-                                    justify-content:space-between;background-color:#01bf86;">
-            <div id="content" style="display:flex; flex-direction:column; width:40%; padding:30px">
+        <div id="description" style="margin-top:50px; display:flex; align-items:center; padding:100px;
+                                    justify-content:space-around; background-color:#01bf86;">
+            <div id="content" style="display:flex; flex-direction:column; width:40%; padding:30px;">
                 <p style="font-size: x-large; color:white">Zodkoo is a fully responsive landing page template</p>
-                <p style="font-size: small; color:white">Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</p>
-                <div>
-                    <button style="background-color:#01bf86; color:white; 
-                                    border-top-right-radius:5px; border-bottom-right-radius:5px;
-                                    border-top-left-radius:5px; border-bottom-left-radius:5px;border-color:white;
+                <p style="font-size: small; color:white;margin-bottom: 50px;">Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</p>
+                <div style="display:flex;align-items: center;">
+                    <div>
+                        <button style="background-color:#01bf86; color:white; height: 40px; width: 150px;
+                        border-radius: 400px;border-color:white;font-weight:600;;
                                     ">GET STARTED</button>
-                    <span style="font-size:medium; color:white">OR</span>
-                    <img
-                        id="logo"
-                        width="20px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
-                        >
-                    <button>WATCH VIDEO</button>
+                    </div>               
+                    <div>
+                        <span style="font-size:medium; color:white;margin: 0 20px;opacity:0.7;">OR</span>
+                    </div>
+                    <div style="display:flex">
+                        
+                    <button style="color: white;
+                    border: #01bf86;
+                    background-color: #01bf86;font-size:15px;font-weight:600;">▷ WATCH VIDEO</button>
+                    </div>
+                    
                 </div>
             </div>
-            <div id="inputBox" style="padding:30px; background-color:white; color:gray;
-                                        align-items:center">
-                <p>REGISTER FOR FREE</p>
-                <div class="input">
-                    <input type="text" placeholder="Full name" style="margin-bottom: 8px; " />
+            <div id="inputBox" style="padding:30px; background-color:white; color:gray;border-radius: 5px;
+                                        align-items:center;width:300px;height:330px;
+                                        box-shadow: 0px 22px 45px -15px rgba(0,0,0,0.5) !important;">
+                <div style="display: flex; flex-direction:column; align-items:center;">
+                    <p style="color: #778fa2; font-weight: 600; font-size:20px;
+                text-transform: uppercase; margin-bottom: 30px; margin-top: 0px;">
+                REGISTER FOR FREE</p>
+                <div class="input" style="display: flex; width:100%;">
+                    <input type="text" placeholder="Full name" style="margin-bottom: 20px;width:100%;height: 30px;border: 1px solid #eee; " />
                 </div>
-                <div class="input">
-                    <input type="text" placeholder="Email Address" style="margin-bottom: 8px;" />
+                <div class="input" style="display: flex; width:100%;">
+                    <input type="text" placeholder="Email Address" style="margin-bottom: 20px;width:100%;height: 30px;border: 1px solid #eee;" />
                 </div>
-                <div class="input">
-                    <input type="text" placeholder="User name" style="margin-bottom: 8px;" />
+                <div class="input" style="display: flex; width:100%;">
+                    <input type="text" placeholder="User name" style="margin-bottom: 20px;width:100%;height: 30px;border: 1px solid #eee;" />
                 </div>
-                <div class="input">
-                    <input type="text" placeholder="Password" style="margin-bottom: 8px;" />
+                <div class="input" style="display: flex; width:100%;">
+                    <input type="text" placeholder="Password" style="margin-bottom: 20px;width:100%;height: 30px;border: 1px solid #eee;" />
                 </div>
-                <div>
-                    <button style="width:100%">START NOW</button>
+                <div style="display: flex; width:100%;">
+                    <button style="width:100%;color: white;
+                    background-color: #01bf86;
+                    border: #01bf86;height: 40px;
+                    font-weight: 600;margin-top: 5px;
+                    border-radius: 400px;margint-bottom:10px">START NOW</button>
                 </div>
+                <div style="display: flex;">
+                    <span style="font-size:12px;opacity:0.7;white-space: pre;">By registering you agree to the Zodkoo </span>
+                <span style="font-size:12px;opacity:0.7;color:blue;">Terms of Use</span>
+                </div>
+            </div>
+                
             </div>
 
         </div>
-        <div id="product" style="display: flex; flex-direction:column; align-items:center;">
-            <div>
+        <div id="product" style="display: flex; flex-direction:column; align-items:center;margin-top: 80px;margin-left:200px;margin-right:200px;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
                 <img
                     id="logo"
-                    width="100px"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                    width="60px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ29r-aXCEwHEjGmxncgILd9QUc252QcG_82w&usqp=CAU"
                 >
-                <p>Clean and Ultra Modern Design</p>
+                <p style="color:#496174; font-size:20px; font-weight:600">Clean and Ultra Modern Design</p>
             </div>
             <div style="display: flex; flex-direction:row; padding: 50px; justify-content:space-evenly">
                 <div style="width:40%; ">
-                    <p>Praesent et viverra massa non varius magna eget nibh vitae velit posuere efficitur.</p>
-                    <p>The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.We put a lot of effort in design, as it’s the most important ingredient of successful website.
+                    <p style="font: weight 200;opacity: 0.5;">Praesent et viverra massa non varius magna eget nibh vitae velit posuere efficitur.</p>
+                    <p style="font: weight 200;opacity: 0.5;">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.We put a lot of effort in design, as it’s the most important ingredient of successful website.
                     </p>
-                    <button>LEARN MORE</button>
+                    <button style="color: white;
+                    background-color: #01bf86;
+                    border: #01bf86;
+                    width: 150px;font-weight: 600;
+                    height: 40px;border-radius: 400px;">LEARN MORE</button>
                 </div>
                 <div>
                     <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="400px"
+                        src="https://www.priorityit.co.nz/wp-content/uploads/2018/03/computing-laptop-smartphone-tablet.jpg"
                     >
                 </div>
             </div>
         </div>
         <div id="specification">
-            <div style="display: flex; flex-direction:column; align-items:center">
-                <p>It's designed for describing your app, agency or business</p>
-                <p>The clean and well commented code allows easy customization of the theme.It's
+            <div style="display: flex; flex-direction:column; align-items:center;margin-top: 100px; margin-bottom:30px">
+                <p style="color:#496174; font-size:20px; font-weight:600;max-resolution: bottom 10px;">It's designed for describing your app, agency or business</p>
+                <p style="width:60%;opacity:0.5; margin-top:0px">The clean and well commented code allows easy customization of the theme.It's
                     designed for describing your app, agency or business.</p>
             </div>
-            <div>
-                <div class="Box">
-                    <div>
+            <div style="display: flex; margin-top: 50px;flex-direction: column; justify-content: center; align-items: center; margin-bottom: 100px;margin-left:300px;margin-right:300px;">
+                <div class="Box" style="margin-bottom: 70px;">
+                    <div style="display: flex;  flex-direction: column;  align-items: center;">
                         <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="70px"
+                        src="https://cdn4.iconfinder.com/data/icons/whsr-january-flaticon-set/512/rocket.png"
                         >
-                        <p>Strategy Solutions</p>
-                        <p>
+                        <p style="font-size: 18px;color:#496174;font-weight:600;">Strategy Solutions</p>
+                        <p style="width:80%; opacity: 0.5;font-size: 14px;">
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                         </p>
                     </div>
-                    <div>
+                    <div style="display: flex;  flex-direction: column;  align-items: center;">
                         <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="65px"
+                        src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-atom-icon-png-image_3728077.jpg"
                         >
-                        <p>Digital Design</p>
-                        <p>
+                        <p style="font-size: 18px;color:#496174;font-weight:600;">Digital Design</p>
+                        <p style="width:80%;opacity: 0.5;font-size: 14px;">
                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..
                         </p>
                     </div>
-                    <div>
+                    <div style="display: flex;  flex-direction: column;  align-items: center;">
                         <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="65px"
+                        src="https://images.vexels.com/media/users/3/128243/isolated/preview/a1a5b9494d50bb3754bba547f2d88487-computer-monitor-flat-icon-by-vexels.png"
                         >
-                        <p>Analytics Solutions</p>
-                        <p>
+                        <p style="font-size: 18px;color:#496174;font-weight:600;">Analytics Solutions</p>
+                        <p style="width:80%;opacity: 0.5;font-size: 14px;">
                             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
                         </p>
                     </div>
                 </div>
                 <div class="Box">
-                    <div>
+                    <div style="display: flex;  flex-direction: column;  align-items: center;">
                         <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="70px"
+                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png"
                         >
-                        <p>Strategy Solutions</p>
-                        <p>
+                        <p style="font-size: 18px;color:#496174;font-weight:600;">Strategy Solutions</p>
+                        <p style="width:80%;opacity: 0.5;font-size: 14px;">
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                         </p>
                     </div>
-                    <div>
+                    <div style="display: flex;  flex-direction: column;  align-items: center;">
                         <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="75px"
+                        src="https://cdn3.iconfinder.com/data/icons/business-and-finance-icons/512/Credit_Card-512.png"
                         >
-                        <p>Digital Design</p>
-                        <p>
+                        <p style="font-size: 18px;color:#496174;font-weight:600;">Digital Design</p>
+                        <p style="width:80%;opacity: 0.5;font-size: 14px;">
                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..
                         </p>
                     </div>
-                    <div>
+                    <div style="display: flex;  flex-direction: column;  align-items: center;">
                         <img
                         id="logo"
-                        width="300px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                        width="65px"
+                        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/headphones-2103266-1771444.png"
                         >
-                        <p>Analytics Solutions</p>
-                        <p>
+                        <p style="font-size: 18px;color:#496174;font-weight:600;">Analytics Solutions</p>
+                        <p style="width:80%;opacity: 0.5;font-size: 14px;">
                             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="Price" style="display: flex; flex-direction:column; align-items:center">
-            <div>
-                <p>Choose your perfect plan</p>
-                <p>
+        <div id="Price" style="display: flex; flex-direction:column; align-items:center;padding-bottom: 80px;">
+            <div style="display:flex; flex-direction:column; align-items:center;margin-bottom: 40px;">
+                <p style="color:#496174; font-size:20px; font-weight:600; margin-top:100px; margin-bottom:10px">Choose your perfect plan</p>
+                <p style="width:60%;opacity:0.5; margin-top:0">
                     The clean and well commented code allows easy customization of the theme.It's
                     designed for describing your app, agency or business.
                 </p>
             </div>
             <div style="display: flex; align-items:center;">
-                <div>
-                    <div>
-                        <p>BASIC</p>
-                        <p>$19</p>
-                        <p>Per Month</p>
+                <div style="position: relative;display:flex; flex-direction:column;
+                margin: 20px auto 0px auto;width: 220px;
+                max-width: 320px; margin-right: 20px;align-items: center;
+                padding: 0px 30px 50px;
+                border: 2px solid #95A8B7;">
+                    <div style="display: flex;flex-direction:column;margin-top: 20px;align-items:center;margin-bottom: 30px;">
+                        <p style="color:#01bf86;
+                        font-size: 16px; margin-bottom: 10px;letter-spacing: 1px;font-weight: 600;">BASIC</p>
+                        <p style="font-size: 38px;color:#496174;margin-bottom: 10px; margin-bottom:10px;margin-top:0px;font-weight: 700;
+                        ">$19</p>
+                        <p style="width:100%;opacity:0.5; margin-top:0;font-size: 13px;">Per Month</p>
                     </div>
-                    <div>
-                        <div>
+                    <div style="display: flex; flex-direction:column; margin-bottom: 30px;">
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>10 GB Storage</span>
+                        <span id='price_details'>10 GB Storage</span>
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>500 GB Bandwidth</span>
+                        <span id='price_details'>500 GB Bandwidth</span>
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>Email Support</span>
+                        <span id='price_details'>Email Support</span>
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>24x7 Support</span>
-                        </div>
-                    </div>
-                    <div>
-                        <button>SIGNUP NOW</button>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <p>BASIC</p>
-                        <p>$19</p>
-                        <p>Per Month</p>
-                    </div>
-                    <div>
-                        <div>
-                            <img
-                            id="logo"
-                            width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
-                        >
-                        <span>10 GB Storage</span>
-                        </div>
-                        <div>
-                            <img
-                            id="logo"
-                            width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
-                        >
-                        <span>500 GB Bandwidth</span>
-                        </div>
-                        <div>
-                            <img
-                            id="logo"
-                            width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
-                        >
-                        <span>Email Support</span>
-                        </div>
-                        <div>
-                            <img
-                            id="logo"
-                            width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
-                        >
-                        <span>24x7 Support</span>
+                        <span id='price_details'>24x7 Support</span>
                         </div>
                     </div>
                     <div>
-                        <button>SIGNUP NOW</button>
+                        <button style="color: white;
+                        background-color: #01bf86;
+                        border: #01bf86;
+                        width: 150px;font-weight: 600;
+                        height: 40px;border-radius: 400px;">SIGNUP NOW</button>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <p>BASIC</p>
-                        <p>$19</p>
-                        <p>Per Month</p>
+                <div style="position: relative;display:flex; flex-direction:column;
+                margin: 20px auto 0px auto;width: 220px;
+                max-width: 320px;margin-right: 20px;height: 280px;align-items: center;
+                padding: 0px 30px 50px;height:380px;
+                border: 2px solid #95A8B7;">
+                    <div style="display: flex;flex-direction:column;margin-top: 20px; align-items:center;margin-bottom: 30px;">
+                        <p style="color:#01bf86;font-size: 16px; margin-bottom: 10px;letter-spacing: 1px;font-weight: 600;">PREMIUM</p>
+                        <p style="font-size: 38px;color:#496174;margin-bottom: 10px; margin-bottom:10px;margin-top:0px;font-weight: 700;
+                        ">$29</p>
+                        <p style="width:100%;opacity:0.5; margin-top:0;font-size: 13px;">Per Month</p>
+                    </div>
+                    <div style="display: flex; flex-direction:column; margin-bottom: 30px;">
+                        <div style="display: flex;">
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
+                        >
+                        <span id='price_details'>10 GB Storage</span>
+                        </div>
+                        <div style="display: flex;">
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
+                        >
+                        <span id='price_details'>500 GB Bandwidth</span>
+                        </div>
+                        <div style="display: flex;">
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
+                        >
+                        <span id='price_details'>Email Support</span>
+                        </div>
+                        <div style="display: flex;">
+                            <img
+                            id="logo"
+                            width="30px"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
+                        >
+                        <span id='price_details'>24x7 Support</span>
+                        </div>
                     </div>
                     <div>
-                        <div>
+                        <button style="color: white;
+                        background-color: #01bf86;
+                        border: #01bf86;
+                        width: 150px;font-weight: 600;
+                        height: 40px;border-radius: 400px;">SIGNUP NOW</button>
+                    </div>
+                </div>
+                <div style="position: relative; display:flex; flex-direction:column;
+                margin: 20px auto 0px auto;width: 220px;
+                max-width: 320px;align-items: center;
+                padding: 0px 30px 50px;
+                border: 2px solid #95A8B7;">
+                    <div style="display: flex; flex-direction: column; margin-top: 20px;align-items:center;margin-bottom: 30px;">
+                        <p style="color:#01bf86;font-size: 16px; margin-bottom: 10px;letter-spacing: 1px;font-weight: 600;">DEVELOPER</p>
+                        <p style="font-size: 38px;color:#496174;margin-bottom: 10px; margin-bottom:10px;margin-top:0px;font-weight: 700;
+                        ">$39</p>
+                        <p style="width:100%;opacity:0.5; margin-top:0;font-size: 13px;">Per Month</p>
+                    </div>
+                    <div style="display: flex; flex-direction:column; margin-bottom: 30px;">
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>10 GB Storage</span>
+                        <span id='price_details'>10 GB Storage</span>
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>500 GB Bandwidth</span>
+                        <span id='price_details'>500 GB Bandwidth</span>
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>Email Support</span>
+                        <span id='price_details'>Email Support</span>
                         </div>
-                        <div>
+                        <div style="display: flex;">
                             <img
                             id="logo"
                             width="30px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            src="https://www.thedesignlove.com/wp-content/uploads/2013/09/green-in-logo-starbucks.jpg"
                         >
-                        <span>24x7 Support</span>
+                        <span id='price_details'>24x7 Support</span>
                         </div>
                     </div>
                     <div>
-                        <button>SIGNUP NOW</button>
+                        <button style="color: white;
+                        background-color: #01bf86;
+                        border: #01bf86;
+                        width: 150px;font-weight: 600;
+                        height: 40px;border-radius: 400px;">SIGNUP NOW</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="Sponser" style="display: flex; flex-direction:column; align-items:center">
-            <div>
-                <p>Trusted by Thousands</p>
-                <p>
+        <div id="Sponser" style="display: flex; flex-direction:column; align-items:center;
+        background-color: #f3f6fa !important;
+        border-top: 1px solid #e8eef6;
+        border-bottom: 1px solid #e8eef6;padding-top: 100px;
+        padding-bottom: 80px;">
+            <div style="display: flex;flex-direction:column;align-items:center;margin-bottom: 100px;">
+                <p style="color:#496174; font-size:20px; font-weight:600; margin-bottom:10px">Trusted by Thousands</p>
+                <p style="width:60%;opacity:0.5; margin-top:0">
                     The clean and well commented code allows easy customization of the theme.It's
                     designed for describing your app, agency or business.
                 </p>
             </div>
-            <div>
+            <div style="display: flex; width:80%;justify-content:center;margin-bottom: 70px;align-items:center">
                 <img
                     id="logo"
-                    width="50px"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                    width="250px"
+                    height="100px"
+                    style="margin-right:50px;"
+                    src="https://i.imgur.com/a12W3da.png"
                 >
                 <img
                     id="logo"
-                    width="50px"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                    width="250px"
+                    height="80px"
+                    style="margin-right:50px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
                 >
                 <img
                     id="logo"
-                    width="50px"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                    width="200px"
+                    style="margin-right:50px;"
+                    src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo.png"
                 >
                 <img
                     id="logo"
-                    width="50px"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                    width="150px"
+                    height="100px"
+                    src="https://i.pinimg.com/originals/3c/9a/bb/3c9abb709bee6a44a4490544d7f3f5e5.png"
                 >
             </div>
-            <div class="row" style="display: flex;">
+            <div class="row" style="display: flex; padding: 30px; margin-left:300px;margin-right:300px;">
                 <div>
-                    <div>
-                        <p>
+                    <div style="border-radius: 5px;width: 80%;
+                    padding: 30px 30px 20px 30px;margin-bottom: 30px;
+                    position: relative;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 2px rgba(221,221,221,0.32);">
+                        <p style="font: weight 200;opacity: 0.5;">
                             “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
                         </p>
                     </div>
-                    <div style="display: flex;">
-                        <img
+                    <div style="display: flex;margin-left: 20px;">
+                        <div style="display: flex;">
+                            <img
                             id="logo"
-                            width="50px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            style="border-radius: 50%;"
+                            width="60px"
+                            src="https://static.wikia.nocookie.net/simpsons/images/d/d5/Lisa_Simpson_official.png/revision/latest/top-crop/width/360/height/360?cb=20190409004811"
                         >
-                        <p>Calebogden</p>
-                        <span>Another company , City</span>
+                        </div>
+                        <div style="display: flex; flex-direction:column">
+                            <p style="font-size:14px; margin-bottom:0;">Calebogden</p>
+                            <p style="font-weight:200;opacity:0.5;font-size:14px;margin-top:0;">Another company , City</p>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <p>
+                    <div style="border-radius: 5px;width: 80%;
+                    padding: 30px 30px 20px 30px;margin-bottom: 30px;
+                    position: relative;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 2px rgba(221,221,221,0.32);">
+                        <p style="font: weight 200;opacity: 0.5;">
                             “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
                         </p>
                     </div>
-                    <div style="display: flex;">
-                        <img
+                    <div style="display: flex;margin-left: 20px;">
+                        <div style="display: flex;">
+                            <img
                             id="logo"
-                            width="50px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            style="border-radius: 50%;"
+                            width="60px"
+                            height="70px"
+                            src="https://i.pinimg.com/originals/78/fa/13/78fa132a644b0f3ebb2c41616542d83f.png"
                         >
-                        <p>Dancounsell</p>
-                        <span>Another company , City</span>
+                        </div>
+                        <div style="display: flex; flex-direction:column">
+                            <p style="font-size:14px; margin-bottom:0;">Dancounsell</p>
+                            <p style="font-weight:200;opacity:0.5;font-size:14px;margin-top:0;">Another company , City</p>
+                        </div>
+                        
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <p>
+                    <div style="border-radius: 5px;width: 80%;
+                    padding: 30px 30px 20px 30px;margin-bottom: 30px;
+                    position: relative;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 2px rgba(221,221,221,0.32);">
+                        <p style="font: weight 200;opacity: 0.5;">
                             “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
                         </p>
                     </div>
-                    <div style="display: flex;">
-                        <img
+                    <div style="display: flex;margin-left: 20px;">
+                        <div style="display: flex;">
+                            <img
                             id="logo"
-                            width="50px"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSfcFig6mzmFdmhIfW5rzGxUEmH8xzQGSNA&usqp=CAU"
+                            style="border-radius: 50%;"
+                            width="60px"
+                            height="70px"
+                            src="https://static.simpsonswiki.com/images/thumb/0/0b/Marge_Simpson.png/250px-Marge_Simpson.png"
                         >
-                        <p>Indianguru</p>
-                        <span>Another company , City</span>
+                        </div>
+                        <div style="display: flex; flex-direction:column">
+                            <p style="font-size:14px; margin-bottom:0;">Indianguru</p>
+                            <p style="font-weight:200;opacity:0.5;font-size:14px;margin-top:0;">Another company , City</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-        <div id="Contact" style="display: flex; flex-direction:column; align-items:center">
-            <div>
-                <p>Be engaged Newsletter</p>
-                <p>The clean and well commented code allows easy customization of the theme.It's
+        <div id="Contact" style="display: flex; flex-direction:column; 
+                        padding-top: 100px; padding-bottom: 80px;align-items:center;background-color: #01bf86;">
+            <div style="display: flex; flex-direction:column; align-items:center; margin-bottom:30px">
+                <p style="font-size: 22px;margin-bottom:10px;
+                margin-top: 0;color:white">Be engaged Newsletter</p>
+                <p style="width:60%; margin-top:0; font-size:14;color:white; opacity:0.7">The clean and well commented code allows easy customization of the theme.It's
                     designed for describing your app, agency or business.</p>
             </div>
-            <div>
-                <input type="text" placeholder="Enter e-mail address" />
-            </div>
-            <div>
-                <button>SUBSCRIBE</button>
-                <p>You can un-subscribe at any time.</p>
+            <div style="display: flex; flex-direction:column;align-items: center;">
+                <input type="text" placeholder="Enter e-mail address"
+                style="background-color: transparent !important;
+                color: white; opacity:0.5;
+                border: 2px solid rgba(255,255,255,0.4);
+                height: 50px;width: 600px;
+                padding-left: 20px;
+                box-shadow: none !important;
+                margin-bottom: 30px;" />
+                <button style="color:#01bf86; width: 150px;
+                height: 40px; font-weight: 600;border:white;border-radius: 400px;
+                 background-color:white">SUBSCRIBE</button>
+                <p style="font-size:12px; color:white; margin-top: 3px;">You can un-subscribe at any time.</p>
             </div>
         </div>
-
+        <div id="Support" style="display: flex;padding-top: 60px;
+        padding-bottom: 60px; flex-direction:column; align-items:center;
+        background-color: #2f3e47;">
+            <div id="row"
+            style="display:flex; width:100%; justify-content:space-evenly;margin-bottom:70px">
+                <div style="display:flex;flex-direction:column;">
+                    <p style="color:white;font-weight: 600;">Zodkoo</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Home</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Features</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Team</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">FAQ</p>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <p style="color:white;font-weight: 600;">Social</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Facebook</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Twitter</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Behance</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Dribbble</p>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <p style="color:white;font-weight: 600;">Support</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Help & Support</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Privacy Policy</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">Terms & Conditions</p>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <p style="color:white;font-weight: 600;">Contact</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">795 Folsom Ave, Suite 600</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">San Francisco, CA 94107</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">P: (123) 456-7890</p>
+                    <p style="color:gray;font-size:12px;margin-bottom: 0;">E: email@email.com</p>
+                </div>
+            </div>
+                <div style="display: flex;align-items:center">
+                    <p style="color:white;font-size:12px;opacity:0.5">2020 © Zodkoo</p>
+                </div>
+        </div>
 
     </body>
 </html>
