@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>JavaScript</h1>
+        <script>
+            document.write("hello word");
+        </script>
+        <input type="button" id="hw" onclick="alert('what')" value="what!" />
+        <script type="text/javascript">
+            var hw = document.getElementById('hw');
+            hw.addEventListener('click', function(){
+                alert('hello word');
+            })
+        </script>
+        <input type="button" id="hw2" value="script is out" />
+        <script type="text/javascript" src="js_practice.js"></script>
+    </body>
+</html>
