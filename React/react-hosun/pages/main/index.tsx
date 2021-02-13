@@ -1,5 +1,5 @@
-
 import styled from 'styled-components';
+
 
 const FlexBox = styled.div`
     display : flex;
@@ -20,26 +20,32 @@ const Body = styled.body`
 const HeaderDiv = styled.div`
     display: flex;
     justify-content: space-around;
-    width: 100%;
     background-color: #01bf86;
     align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    width:70%;
+    margin:0 auto;
+`
+const TopHeader = styled.div`
+    position:fixed;
+    background-color: #01bf86;
+    width:100%;
 `
 const DescriptionDiv = styled.div`
-    margin-top:50px; 
     display:flex; 
     align-items:center; 
-    padding-top:75px; 
+    padding-top:150px; 
     padding-bottom:150px;
     justify-content:space-around; 
     background-color:#01bf86;
-    width:100%;
+    width:50%;
+    margin:0 auto;
 `
 const Description = styled(FlexBox)`
-    width: 60%; 
+    width: 50%; 
     flex-direction : column;
     justify-content: space-between; 
     padding-top:50px;
@@ -185,12 +191,12 @@ const ProductDiv = styled(FlexBox2)`
 const TextStyle = styled.p`
     color:#496174; 
     font-size:22px; 
-    font-weight:600;
+    font-weight:500;
 `
 const TextStyle2 = styled.p`
     color: ${props => props.inputColor || "#496174"}; 
     font-size:22px; 
-    font-weight:600;
+    font-weight:500;
 `
 const TextStyleSub2 = styled.p`
     width:60%;
@@ -232,15 +238,16 @@ const MiniBoxFeature = styled(FlexBox2)`
 const SpecTitle = styled.p`
     font-size: 18px;
     color:#496174;
-    font-weight:600;
+    font-weight:500;
 `
 const SpecText = styled.p`
     color: #95A8B7 !important;
-    width:80%;
+    width:100%;
     font-size: 14px;
     text-align: center;
 `
 const PriceDiv = styled(FlexBox2)`
+    padding-top:100px;
     padding-bottom: 80px;
 `
 const PriceMenu = styled(FlexBox2)`
@@ -335,10 +342,31 @@ const BottomEtc = styled.p`
         cursor:pointer;
     }
 `
+const IconPlay = styled.i`
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    line-height: 17px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12px;
+    padding-left: 3px;
+    padding-top:3px; 
+    padding-right:2px;
+    margin-left: -12px;
+`
+const IconMini = styled.i`
+    color: #01bf86; 
+    font-size:48px;
+`
 
 const Main = () => {
     return (
-        <Body style={{margin:'0', paddingBottom:'300px'}}>
+        <Body style={{margin:'0'}}>
+            <link rel="stylesheet" href="https://static.tumblr.com/i5s2zks/6kOohwlux/pe-icon-7-stroke.css"></link>
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800" rel="stylesheet"></link>
             <HeaderDiv>
                 <UpperLeftBox>
                     <ZodKoo>ZodKoo</ZodKoo>
@@ -351,52 +379,57 @@ const Main = () => {
                 <UpperRightBox>
                     <MenuButtonSub>Login</MenuButtonSub>
                     <TryButton>Try for Free</TryButton>
-                </UpperRightBox>
+                </UpperRightBox>                
             </HeaderDiv>
-            <DescriptionDiv>
-                <Description>
-                    <p style={{color:'white', fontSize:'30px',fontWeight:'200',width:'75%'}}>Zodkoo is a fully responsive landing page template</p>
-                    <p style={{lineHeight: '24px', fontSize:'16px', marginTop:'10px', marginBottom:'50px', fontWeight: '400',width:'95%', color: 'rgba(255,255,255,0.7)'}}>
-                    Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</p>
-                    <div style={{display:'flex',alignItems: 'center'}}>
-                        <FlexBox><StartButton>GET STARTED</StartButton></FlexBox>
-                        <FlexBox><span style={{fontSize:'medium', color:'white', margin: '0 20px', opacity:'0.7'}}>OR</span></FlexBox>
-                        <FlexBox><button style={{
-                            color: 'white', border: '#01bf86',cursor: 'pointer', backgroundColor: '#01bf86',fontSize:'15px',fontWeight:'600'
-                        }}>WATCH VIDEO</button></FlexBox>
-                    </div>
-                
-                </Description>
-                <InputBox>
-                    <FlexBox2>
-                        <p style={{color: '#778fa2', fontWeight: '600', fontSize:'20px',
-                        marginBottom: '30px', marginTop: '0px'}}>
-                        REGISTER FOR FREE</p>
-                        <InputThing placeholder="Full name" type="text"></InputThing>
-                        <InputThing placeholder="Email Address" type="text"></InputThing>
-                        <InputThing placeholder="User name" type="text"></InputThing>
-                        <InputThing placeholder="Password" type="text"></InputThing>
-                        <FlexBox style={{width:'100%'}}>
-                            <StartNowButton>START NOW</StartNowButton>
-                        </FlexBox>
-                        <FlexBox>
-                            <span style={{fontSize:'12px',opacity:'0.7',whiteSpace: 'pre'}}>By registering you agree to the Zodkoo </span>
-                            <span style={{fontSize:'12px',opacity:'0.7',color:'blue'}}>Terms of Use</span>
-                        </FlexBox>
-                    </FlexBox2>
-                </InputBox>
-            </DescriptionDiv>
+            <div style={{backgroundColor:'#01bf86'}}>
+                <DescriptionDiv>
+                    <Description>
+                        <p style={{color:'white', fontSize:'30px',fontWeight:'200',width:'75%'}}>Zodkoo is a fully responsive landing page template</p>
+                        <p style={{lineHeight: '24px', fontSize:'16px', marginTop:'10px', marginBottom:'50px', fontWeight: '400',width:'95%', color: 'rgba(255,255,255,0.7)'}}>
+                        Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</p>
+                        <div style={{display:'flex',alignItems: 'center'}}>
+                            <FlexBox><StartButton>GET STARTED</StartButton></FlexBox>
+                            <FlexBox><span style={{fontSize:'medium', color:'white', margin: '0 20px', opacity:'0.7'}}>OR</span></FlexBox>
+                            <FlexBox><button style={{
+                                color: 'white', border: '#01bf86',cursor: 'pointer', backgroundColor: '#01bf86',fontSize:'15px',fontWeight:'600'
+                            }}><IconPlay className="pe-7s-play"></IconPlay>WATCH VIDEO</button></FlexBox>
+                        </div>
+                    
+                    </Description>
+                    <InputBox>
+                        <FlexBox2>
+                            <p style={{color: '#778fa2', fontWeight: '600', fontSize:'20px',
+                            marginBottom: '30px', marginTop: '0px'}}>
+                            REGISTER FOR FREE</p>
+                            <InputThing placeholder="Full name" type="text"></InputThing>
+                            <InputThing placeholder="Email Address" type="text"></InputThing>
+                            <InputThing placeholder="User name" type="text"></InputThing>
+                            <InputThing placeholder="Password" type="text"></InputThing>
+                            <FlexBox style={{width:'100%'}}>
+                                <StartNowButton>START NOW</StartNowButton>
+                            </FlexBox>
+                            <FlexBox>
+                                <span style={{fontSize:'12px',opacity:'0.7',whiteSpace: 'pre'}}>By registering you agree to the Zodkoo </span>
+                                <span style={{fontSize:'12px',opacity:'0.7',color:'blue'}}>Terms of Use</span>
+                            </FlexBox>
+                        </FlexBox2>
+                    </InputBox>
+                </DescriptionDiv>
+            </div>
+            
             <ProductDiv>
                 <FlexBox2>
+                    <i class="pe-7s-medal" style={{fontSize:'48px'}}></i>
                     <TextStyle style={{marginBottom: '70px'}}>Clean and Ultra Modern Design</TextStyle>
                 </FlexBox2>
-                <FlexBox style={{width:'60%', justifyContent:'space-evenly'}}>
-                    <FlexBox style={{flexDirection:'column',width:'40%'}}>
+                <FlexBox style={{width:'65%', justifyContent:'space-evenly'}}>
+                    <FlexBox style={{flexDirection:'column',width:'30%'}}>
                         <p style={{fontWeight: '300', lineHeight: '28px', color: '#95A8B7', fontSize: '18px'}}
                         >Praesent et viverra massa non varius magna eget nibh vitae velit posuere efficitur.</p>
                         <p style={{marginTop: '5px', marginBottom: '20px', lineHeight: '26px', color: '#95A8B7',fontSize: '14px'}}
                         >The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.We put a lot of effort in design, as it’s the most important ingredient of successful website.
                         </p>
+
                         <CommonButton>LEARN MORE</CommonButton>
                     </FlexBox>
                     <FlexBox>
@@ -410,31 +443,37 @@ const Main = () => {
                     <TextStyleSub>The clean and well commented code allows easy customization of the theme.It's
                     designed for describing your app, agency or business.</TextStyleSub>
                 </FlexBox2>
-                <DisplayDiv>
+                <DisplayDiv style={{width:'50%'}}>
                     <MiniBox>
                         <MiniBoxFeature>
+                            <IconMini className="pe-7s-rocket"></IconMini>
                             <SpecTitle>Strategy Solutions</SpecTitle>
                             <SpecText>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</SpecText>
                         </MiniBoxFeature>
                         <MiniBoxFeature>
+                            <IconMini className="pe-7s-science"></IconMini>
                             <SpecTitle>Digital Design</SpecTitle>
                             <SpecText>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</SpecText>
                         </MiniBoxFeature>
                         <MiniBoxFeature>
+                            <IconMini className="pe-7s-display1"></IconMini>
                             <SpecTitle>Analytics Solutions</SpecTitle>
                             <SpecText>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</SpecText>
                         </MiniBoxFeature>
                     </MiniBox>
                     <MiniBox>
                         <MiniBoxFeature>
+                            <IconMini className="pe-7s-date"></IconMini>
                             <SpecTitle>Strategy Solutions</SpecTitle>
                             <SpecText>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</SpecText>
                         </MiniBoxFeature>
                         <MiniBoxFeature>
+                            <IconMini className="pe-7s-credit"></IconMini>
                             <SpecTitle>Digital Design</SpecTitle>
                             <SpecText>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</SpecText>
                         </MiniBoxFeature>
                         <MiniBoxFeature>
+                            <IconMini className="pe-7s-headphones"></IconMini>
                             <SpecTitle>Analytics Solutions</SpecTitle>
                             <SpecText>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</SpecText>
                         </MiniBoxFeature>
@@ -456,15 +495,19 @@ const Main = () => {
                         </PriceClass>
                         <FlexBox style={{flexDirection:'column', marginBottom: '30px'}}>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-server" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>10 GB Storage</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-graph" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>500 GB Bandwidth</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-mail-open" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>Email Support</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-tools" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>24x7 Support</PriceDetail>
                             </FlexBox>
                             <CommonButton>SIGNUP NOW</CommonButton>
@@ -478,15 +521,19 @@ const Main = () => {
                         </PriceClass>
                         <FlexBox style={{flexDirection:'column', marginBottom: '30px'}}>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-server" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>10 GB Storage</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-graph" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>500 GB Bandwidth</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-mail-open" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>Email Support</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-tools" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>24x7 Support</PriceDetail>
                             </FlexBox>
                             <CommonButton>SIGNUP NOW</CommonButton>
@@ -500,15 +547,19 @@ const Main = () => {
                         </PriceClass>
                         <FlexBox style={{flexDirection:'column', marginBottom: '30px'}}>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-server" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>10 GB Storage</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-graph" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>500 GB Bandwidth</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-mail-open" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>Email Support</PriceDetail>
                             </FlexBox>
                             <FlexBox style={{marginBottom:'15px'}}>
+                                <i class="pe-7s-tools" style={{marginRight: '5px', marginTop:'10px'}}></i>
                                 <PriceDetail>24x7 Support</PriceDetail>
                             </FlexBox>
                             <CommonButton>SIGNUP NOW</CommonButton>
@@ -581,7 +632,7 @@ const Main = () => {
             </SponsorDiv>
             <ContactDiv>
                 <FlexBox2 style={{marginBottom:'30px'}}>
-                    <TextStyle2 inputColor="white">Trusted by Thousands</TextStyle2>
+                    <TextStyle2 inputColor="white">Be engaged Newsletter</TextStyle2>
                     <TextStyleSub2 inputColor="white" style={{opacity:'0.7'}}>The clean and well commented code allows easy customization of the theme.It's
                     designed for describing your app, agency or business.</TextStyleSub2>
                 </FlexBox2>
