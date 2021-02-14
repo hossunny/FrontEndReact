@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import styled from 'styled-components';
+import CommonButton from './../../src/components/common/CommonButton';
 
-
+interface FlexBoxProps {
+    flexDirection?:string
+}
 const FlexBox = styled.div`
     display : flex;
+    flex-direction: ${(props: FlexBoxProps) =>
+        props.flexDirection ? props.flexDirection : 'row'};
 `
+
 const UpperLeftBox = styled(FlexBox)`
     width:20%; padding:20px;
 `
@@ -29,11 +36,7 @@ const HeaderDiv = styled.div`
     width:70%;
     margin:0 auto;
 `
-const TopHeader = styled.div`
-    position:fixed;
-    background-color: #01bf86;
-    width:100%;
-`
+
 const DescriptionDiv = styled.div`
     display:flex; 
     align-items:center; 
@@ -170,20 +173,20 @@ const StartNowButton = styled.button`
         box-shadow: none ;
     }
 `
-const CommonButton = styled.button`
-    color: white;
-    background-color: #01bf86;
-    border: #01bf86;
-    width: 150px;font-weight: 600;
-    height: 40px;border-radius: 400px;
-    cursor: pointer;
-    :hover{
-        background-color: transparent ;
-        border: 2px solid #01bf86 ;
-        color: #01bf86 ;
-        box-shadow: none ;
-    }
-`
+// const CommonButton = styled.button`
+//     color: white;
+//     background-color: #01bf86;
+//     border: #01bf86;
+//     width: 150px;font-weight: 600;
+//     height: 40px;border-radius: 400px;
+//     cursor: pointer;
+//     :hover{
+//         background-color: transparent ;
+//         border: 2px solid #01bf86 ;
+//         color: #01bf86 ;
+//         box-shadow: none ;
+//     }
+// `
 const ProductDiv = styled(FlexBox2)`
     margin-top: 120px;
     margin-bottom:100px;
@@ -361,8 +364,50 @@ const IconMini = styled.i`
     color: #01bf86; 
     font-size:48px;
 `
+const headerMenuButtonTexts = [
+    'Features',
+    'Plans',
+    'Clients',
+    'Pages▼'
+]
+const FeatureItems1 = [
+    {
+        icon: <IconMini className="pe-7s-display1"></IconMini>,
+        body1: 'Strategy Solutions',
+        body2: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+    },
+    {
+        icon: <IconMini className="pe-7s-science"></IconMini>,
+        body1: 'Digital Design',
+        body2: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..'
+    },
+    {
+        icon : <IconMini className="pe-7s-display1"></IconMini>,
+        body1 : 'Analytics Solutions',
+        body2 : 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+    },
+]
+const FeatureItems2 = [
+    {
+        icon: <IconMini className="pe-7s-date"></IconMini>,
+        body1: 'Strategy Solutions',
+        body2: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+    },
+    {
+        icon: <IconMini className="pe-7s-credit"></IconMini>,
+        body1: 'Digital Design',
+        body2: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..'
+    },
+    {
+        icon : <IconMini className="pe-7s-headphones"></IconMini>,
+        body1 : 'Analytics Solutions',
+        body2 : 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+    },
+]
 
 const Main = () => {
+    const [selectedHeaderMenuIdx, setSelectedHeaderMenuIdx] = useState(0)
+    console.log(`selectedHeaderMenuIdx:${selectedHeaderMenuIdx}`)
     return (
         <Body style={{margin:'0'}}>
             <link rel="stylesheet" href="https://static.tumblr.com/i5s2zks/6kOohwlux/pe-icon-7-stroke.css"></link>
@@ -371,10 +416,19 @@ const Main = () => {
                 <UpperLeftBox>
                     <ZodKoo>ZodKoo</ZodKoo>
                     <MenuButton>Home</MenuButton>
-                    <MenuButtonSub>Feature</MenuButtonSub>
-                    <MenuButtonSub>Plans</MenuButtonSub>
-                    <MenuButtonSub>Clients</MenuButtonSub>
-                    <MenuButtonSub>Pages▼</MenuButtonSub>
+                    {headerMenuButtonTexts.map((headerMenuButtonText,idx) => {
+                        return (
+                            <MenuButtonSub
+                            key={idx}
+                            onClick={(e) => {
+                                setSelectedHeaderMenuIdx(idx)
+                            }}
+                            active={selectedHeaderMenuIdx == idx}
+                            >
+                                {headerMenuButtonText}
+                            </MenuButtonSub>
+                        )
+                    })}
                 </UpperLeftBox>
                 <UpperRightBox>
                     <MenuButtonSub>Login</MenuButtonSub>
@@ -445,38 +499,26 @@ const Main = () => {
                 </FlexBox2>
                 <DisplayDiv style={{width:'50%'}}>
                     <MiniBox>
-                        <MiniBoxFeature>
-                            <IconMini className="pe-7s-rocket"></IconMini>
-                            <SpecTitle>Strategy Solutions</SpecTitle>
-                            <SpecText>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</SpecText>
-                        </MiniBoxFeature>
-                        <MiniBoxFeature>
-                            <IconMini className="pe-7s-science"></IconMini>
-                            <SpecTitle>Digital Design</SpecTitle>
-                            <SpecText>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</SpecText>
-                        </MiniBoxFeature>
-                        <MiniBoxFeature>
-                            <IconMini className="pe-7s-display1"></IconMini>
-                            <SpecTitle>Analytics Solutions</SpecTitle>
-                            <SpecText>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</SpecText>
-                        </MiniBoxFeature>
+                        {FeatureItems1.map((featureItem, idx)=>{
+                            return (
+                                <MiniBoxFeature key={idx}>
+                                    {featureItem.icon}
+                                    <SpecTitle>{featureItem.body1}</SpecTitle>
+                                    <SpecText>{featureItem.body2}</SpecText>
+                                </MiniBoxFeature>
+                            )
+                        })}
                     </MiniBox>
                     <MiniBox>
-                        <MiniBoxFeature>
-                            <IconMini className="pe-7s-date"></IconMini>
-                            <SpecTitle>Strategy Solutions</SpecTitle>
-                            <SpecText>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</SpecText>
-                        </MiniBoxFeature>
-                        <MiniBoxFeature>
-                            <IconMini className="pe-7s-credit"></IconMini>
-                            <SpecTitle>Digital Design</SpecTitle>
-                            <SpecText>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</SpecText>
-                        </MiniBoxFeature>
-                        <MiniBoxFeature>
-                            <IconMini className="pe-7s-headphones"></IconMini>
-                            <SpecTitle>Analytics Solutions</SpecTitle>
-                            <SpecText>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</SpecText>
-                        </MiniBoxFeature>
+                        {FeatureItems2.map((featureItem, idx)=>{
+                                return (
+                                    <MiniBoxFeature key={idx}>
+                                        {featureItem.icon}
+                                        <SpecTitle>{featureItem.body1}</SpecTitle>
+                                        <SpecText>{featureItem.body2}</SpecText>
+                                    </MiniBoxFeature>
+                                )
+                        })}
                     </MiniBox>
                 </DisplayDiv>
             </SpecificationDiv>
@@ -644,27 +686,27 @@ const Main = () => {
             </ContactDiv>
             <SupportDiv>
                 <FlexBox style={{width:'60%', justifyContent:'space-evenly',marginBottom:'70px'}}>
-                    <FlexBox style={{flexDirection:'column'}}>
+                    <FlexBox flexDirection='column'>
                         <p style={{color:'white',fontWeight: '600'}}>Zodkoo</p>
                         <BottomEtc>Home</BottomEtc>
                         <BottomEtc>Features</BottomEtc>
                         <BottomEtc>Team</BottomEtc>
                         <BottomEtc>FAQ</BottomEtc>
                     </FlexBox>
-                    <FlexBox style={{flexDirection:'column'}}>
+                    <FlexBox flexDirection='column'>
                         <p style={{color:'white',fontWeight: '600'}}>Social</p>
                         <BottomEtc>Facebook</BottomEtc>
                         <BottomEtc>Twitter</BottomEtc>
                         <BottomEtc>Behance</BottomEtc>
                         <BottomEtc>Dribbble</BottomEtc>
                     </FlexBox>
-                    <FlexBox style={{flexDirection:'column'}}>
+                    <FlexBox flexDirection='column'>
                         <p style={{color:'white',fontWeight: '600'}}>Support</p>
                         <BottomEtc>Help & Support</BottomEtc>
                         <BottomEtc>Privacy Policy</BottomEtc>
                         <BottomEtc>Terms & Conditions</BottomEtc>
                     </FlexBox>
-                    <FlexBox style={{flexDirection:'column'}}>
+                    <FlexBox flexDirection='column'>
                         <p style={{color:'white',fontWeight: '600'}}>Contact</p>
                         <p style={{color: 'rgba(255,255,255,0.4)',fontSize:'14px', marginBottom: '5px', marginTop: '5px'}}>795 Folsom Ave, Suite 600</p>
                         <p style={{color: 'rgba(255,255,255,0.4)',fontSize:'14px', marginBottom: '5px', marginTop: '5px'}}>San Francisco, CA 94107</p>
